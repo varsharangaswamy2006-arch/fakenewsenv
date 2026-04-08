@@ -46,7 +46,7 @@ def predict(text):
     prob = model.predict_proba(x)[0]
     label = int(np.argmax(prob))
     confidence = float(np.max(prob))
-    return label, confidence, prob
+    return label, confidence
 
 # ================= ENV =================
 class OpenEnv:
@@ -103,7 +103,7 @@ def predict_api():
     data = request.json
     text = data["text"]
 
-    label, confidence, prob = predict(text)
+    label, confidence = predict(text)
     return jsonify({
         "label": label,
         "confidence": confidence
