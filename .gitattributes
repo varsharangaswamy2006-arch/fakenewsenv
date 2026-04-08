@@ -1,0 +1,29 @@
+# Auto detect text files and normalize line endings
+* text=auto
+
+# Python files
+*.py text
+
+# YAML / config files
+*.yml text
+*.yaml text
+
+# Markdown
+*.md text
+
+# Streamlit / config
+*.toml text
+
+# Ignore line ending issues in Windows/Linux
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+
+# Model / large files
+*.pkl binary
+*.joblib binary
